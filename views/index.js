@@ -15,6 +15,7 @@ const createHomepageTemplate = () => `
 
     <main>
         <div class="album-list">
+            <button hx-get="/albums">Show albums</button>
             <!-- Album list later -->
         </div>
         <div class="add-album-form">

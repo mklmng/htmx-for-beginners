@@ -1,5 +1,6 @@
 import express from 'express';
 import createHomepageTemplate from './views/index.js';
+import createListTemplate from './views/list.js';
 
 // create app
 const app = express();
@@ -12,6 +13,10 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
   res.send(createHomepageTemplate());
 });
+
+app.get('/albums', (req, res) => {
+  res.send(createListTemplate());
+})
 
 // listen to port
 app.listen(3000, () => {
